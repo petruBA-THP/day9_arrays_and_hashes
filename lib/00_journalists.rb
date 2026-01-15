@@ -36,7 +36,7 @@ def short2long_tag(theArray)
             repAll << j # add journalist shortest name
         end
         #puts repAll
-        puts "nb:#{nb} all:#{repAll[nb]}" #.length
+        #puts "nb:#{nb} all:#{repAll[nb]}" #.length
         }
     
     end
@@ -78,19 +78,15 @@ pause
 
 puts "- Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)"
 fromMini2max = short2long_tag(journalist)
+puts fromMini2max
 pause
 
 puts "- Quelle est la position dans l'array de la personne @epenser ?"
 puts "=> la position de @epenser est: #{journalist.index('@epenser')}"
 pause
 
-
-def nbByLength(arrayByLength)
-    puts arrayByLength.length
-end
-
 puts "- Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)"
 puts "???"
-nbByLength(fromMini2max)
+
 
 
