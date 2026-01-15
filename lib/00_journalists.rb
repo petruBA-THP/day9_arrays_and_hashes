@@ -43,6 +43,26 @@ def short2long_tag(theArray)
     return repAll
 end
 
+def nbCaractere(journalist)
+    carLength=[]
+    journalist.length.times do |i|
+        if carLength[ ( journalist[i].length - 1 ) ] == nil # -1 car $ ne compte pas #init et increment du nb de caractere
+            carLength[ ( journalist[i].length - 1 ) ] = 1
+        else carLength[ ( journalist[i].length - 1 ) ] += 1
+        end
+    end
+
+    carLength.length.times do |i| #traite le retour terminal
+        if carLength[i] == nil 
+            puts " => 0 occurence avec #{i} caractere(s)"
+        else
+            puts " => #{carLength[i]} occurence(s) avec #{i} caracteres"
+        end
+    end
+end
+
+
+
 def pause
     puts "------------------"
     gets.chomp
@@ -86,7 +106,4 @@ puts "=> la position de @epenser est: #{journalist.index('@epenser')}"
 pause
 
 puts "- Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)"
-puts "???"
-
-
-
+nbCaractere(journalist)
