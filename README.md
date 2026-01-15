@@ -11,5 +11,5 @@ your folder
 2.2 Big Data => 00_journalists.rb
     various manipulations with an array.
 
-2.3. Blockchain
+2.3. Blockchain => 01_cryptocurrencies.rb
     various manipulations with an hash.
