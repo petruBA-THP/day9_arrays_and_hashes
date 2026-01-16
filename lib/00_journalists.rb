@@ -64,7 +64,9 @@ end
 
 
 def pause
-    puts "------------------"
+    puts "-" * 100
+    print "Press [enter] to continue ..."
+    puts "-" * 100
     gets.chomp
 end
 
