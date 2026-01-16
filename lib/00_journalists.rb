@@ -65,7 +65,7 @@ end
 
 def pause
     puts "-" * 100
-    print "Press [enter] to continue ..."
+    print "Press [enter] to continue ...\n"
     puts "-" * 100
     gets.chomp
 end
@@ -84,12 +84,12 @@ puts "=> le handle le plus court est #{short[0]}"
 pause
 
 puts "- Combien y-a-t'il de handle contenant 5 caractères (le @ ne compte pas pour un caractère)"
-car5 = search_tag_by_length(journalist,5,/^(\w{5})$/ )
+car5 = search_tag_by_length(journalist,5,/^(\w{5})$/ )  #[A-Z][a-z][0-9]
 puts "=> Il y a #{car5[0].length} handle de 5 caractères"
 pause
 
 puts "- Combien commencent par une majuscule (première lettre juste après le @) ?"
-capit = search_tag_by_length(journalist,50,/[A-Z]/)
+capit = search_tag_by_length(journalist,50,/^[A-Z]/)
 puts "=> il y a #{capit[1]} handle commençant par une majuscule"
 pause
 
